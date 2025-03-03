@@ -1,0 +1,1501 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <meta name="description" content="">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="">
+
+      
+      <!-- Font Links -->
+
+
+      <title></title>
+      <!-- SEO Description -->
+      <meta name="description" content="">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      <!-- Header Scripts -->
+      <script id="header-scripts">
+        // This script tag will be replaced with actual scripts.head content
+        if (window.scripts && window.scripts.head) {
+          document.getElementById('header-scripts').outerHTML = window.scripts.head;
+        }
+      </script>
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      // render the settings object
+      //console.log('settings', [object Object]);
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '#4A6FFF',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '#F5F7FF',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '#FF6B4A',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Roboto, sans-serif', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+                body: ['Open Sans, sans-serif', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="">
+      <meta name="keywords" content="">
+      <meta name="robots" content="">
+      <meta name="google-site-verification" content="">
+      <meta name="baidu-verification" content="">
+      <meta name="yandex-verification" content="">
+      <meta name="bing-verification" content="">
+      <meta property="og:title" content="">
+      <meta property="og:description" content="">
+      <meta property="og:image" content="">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="">
+    
+      
+      <!-- Font Links -->
+     
+      <link rel="icon" type="image/x-icon" href="">
+
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: Roboto, sans-serif, Inter, system-ui, sans-serif;
+        }
+        body {
+          font-family: Open Sans, sans-serif, Inter, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative h-full">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+   </body>
+</html><script>window.projectId = "706474cc-9124-4031-af2f-864b488a40bb";</script><div id='RolloutPageContent'><element id="889cf8bc-4a0a-44a8-b06d-54af176cac85" data-section-id="889cf8bc-4a0a-44a8-b06d-54af176cac85">
+
+
+                
+<div id="root">
+  <section id="header">
+    <nav class="bg-white shadow-md dark:bg-gray-800 fixed w-full z-50" x-data="{ isOpen: false }" id="el-ftrlu0za">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-32of67c8">
+        <div class="flex justify-between h-16" id="el-o0sy2jqg">
+          <div class="flex" id="el-hwgkz5oj">
+            <div class="flex-shrink-0 flex items-center" id="el-oyaaj1el">
+              <span class="text-xl font-bold text-indigo-600 dark:text-indigo-400" id="el-9yngcw11">InvoiceGen</span>
+            </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="flex items-center -mr-2 sm:hidden" id="el-xntkkmzs">
+            <button @click="isOpen = !isOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu" id="el-ol18a9r8">
+              <span class="sr-only" id="el-pxh3a58d">Open main menu</span>
+              <!-- Icon when menu is closed -->
+              <svg x-show="!isOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="el-vt6k4wqr">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" id="el-iejemd8m"></path>
+              </svg>
+              <!-- Icon when menu is open -->
+              <svg x-show="isOpen" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" id="el-dw7qs39r" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" id="el-jyzwnxsk"></path>
+              </svg>
+            </button>
+          </div>
+          
+          <!-- Desktop menu -->
+          <div class="hidden sm:ml-6 sm:flex sm:items-center" id="el-2ctt6h60">
+            <ul class="flex space-x-4" id="el-z1q6bfrr">
+              <li id="el-0o481dmh"><a href="#invoice-form" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-white" id="el-iiyelud4">New Invoice</a></li>
+              <li id="el-j5ski3m7"><a href="#invoice-history" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-white" id="el-h6qbwmdv">History</a></li>
+              <li id="el-k80ggdqv"><a href="#settings" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-white" id="el-8odlrnik">Settings</a></li>
+              <li id="el-6ddu7zv4"><a href="#faq" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-white" id="el-ovmz3rve">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div x-show="isOpen" class="sm:hidden" id="mobile-menu" style="display: none;">
+        <ul class="px-2 pt-2 pb-3 space-y-1" id="el-0jrqmf5i">
+          <li id="el-2zpidcdr"><a href="#invoice-form" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700" id="el-5qnnxbpr">New Invoice</a></li>
+          <li id="el-l628v10f"><a href="#invoice-history" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700" id="el-p2o1gq4s">History</a></li>
+          <li id="el-e6hau0xb"><a href="#settings" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700" id="el-lpemv3ui">Settings</a></li>
+          <li id="el-de1ny3d4"><a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700" id="el-coq64v9t">FAQ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+</div>
+
+              </element><element id="32a857e5-704c-44a1-bda7-93486a2c10b6" data-section-id="32a857e5-704c-44a1-bda7-93486a2c10b6">
+
+
+                
+<div id="root">
+  <section id="hero" class="pt-20 pb-12 bg-gradient-to-b from-indigo-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-b7kid8jn">
+      
+      
+      
+    </div>
+  </section>
+</div>
+
+              </element><element id="837f0247-950e-4f0b-861f-007bf0e91b59" data-section-id="837f0247-950e-4f0b-861f-007bf0e91b59">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element><element id="848d6a80-3325-40d3-89c2-437484a8cab1" data-section-id="848d6a80-3325-40d3-89c2-437484a8cab1">
+
+
+                
+<div id="root">
+  <section id="invoice-form" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" id="el-r7r5sgeb">
+      <div class="text-center mb-8" id="el-073pmrad">
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white" id="el-z75lolde">Create Your Invoice</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300" id="el-loksn325">Fill in the details below to generate your invoice</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 shadow-md rounded-lg overflow-hidden" id="el-ot1yctqu">
+        <div class="p-6" id="el-mc6hmtx8">
+          <form x-data="{
+            invoiceNumber: '001234',
+            issueDate: new Date().toISOString().substr(0, 10),
+            dueDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().substr(0, 10),
+            clientName: 'Speedy',
+            clientAddress: '',
+            clientEmail: '',
+            taskDescription: 'Marketing Service',
+            rate: 750.00,
+            quantity: 1,
+            paymentLink: '',
+            
+            get total() {
+              return (this.rate * this.quantity).toFixed(2);
+            }
+          }" id="el-op8aii98">
+            <!-- Invoice Info Section -->
+            <div class="space-y-6" id="el-2vigjbab">
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-md" id="el-u3payqpz">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-jj4ug588">Invoice Information</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="el-1oss4vq0">
+                  <!-- Invoice Number -->
+                  <div id="el-wmgim5vw">
+                    <label for="invoice-number" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-pzehrpcp">Invoice Number</label>
+                    <div class="mt-1 relative rounded-md shadow-sm" id="el-q2bwd47q">
+                      <input type="text" x-model="invoiceNumber" id="invoice-number" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="000001">
+                    </div>
+                  </div>
+                  
+                  <!-- Issue Date -->
+                  <div id="el-f3nsrnwe">
+                    <label for="issue-date" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-du533273">Date of Issue</label>
+                    <div class="mt-1" id="el-019f1ujj">
+                      <input type="date" x-model="issueDate" id="issue-date" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                    </div>
+                  </div>
+                  
+                  <!-- Due Date -->
+                  <div id="el-byov723z">
+                    <label for="due-date" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-bjkj217u">Due Date</label>
+                    <div class="mt-1" id="el-1iwd23fq">
+                      <input type="date" x-model="dueDate" id="due-date" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Client Information -->
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-md" id="el-wp16n1n0">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-cghcayi6">Client Information</h3>
+                
+                <div class="space-y-4" id="el-sln3cp0b">
+                  <!-- Client Name -->
+                  <div id="el-ux9rr8r0">
+                    <label for="client-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-ktxqiae6">Client Name</label>
+                    <div class="mt-1" id="el-nsv0a13h">
+                      <input type="text" x-model="clientName" id="client-name" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="Speedy">
+                    </div>
+                  </div>
+                  
+                  <!-- Client Address -->
+                  <div id="el-gy11jtny">
+                    <label for="client-address" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-hqtubx81">Address (Optional)</label>
+                    <div class="mt-1" id="el-1ne40xix">
+                      <textarea id="client-address" x-model="clientAddress" rows="2" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="123 Business Road, Miami, FL 33101"></textarea>
+                    </div>
+                  </div>
+                  
+                  <!-- Client Email -->
+                  <div id="el-kxy41ja8">
+                    <label for="client-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-q4fvwe7t">Email (Optional)</label>
+                    <div class="mt-1" id="el-gq92eexf">
+                      <input type="email" x-model="clientEmail" id="client-email" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="speedy@business.com">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Task Details -->
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-md" id="el-qq5h3d5e">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-6ei9bgbu">Task Details</h3>
+                
+                <div class="space-y-4" id="el-wrd7lze7">
+                  <!-- Task Description -->
+                  <div id="el-4g5fguim">
+                    <label for="task-description" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-i8rji6j5">Task Description</label>
+                    <div class="mt-1" id="el-m2nyl5dw">
+                      <input type="text" x-model="taskDescription" id="task-description" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="Marketing Service">
+                    </div>
+                  </div>
+                  
+                  <div class="grid grid-cols-2 gap-4" id="el-xeah7l10">
+                    <!-- Rate -->
+                    <div id="el-v68r5ddf">
+                      <label for="rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-yvjo0vvd">Rate ($)</label>
+                      <div class="mt-1 relative rounded-md shadow-sm" id="el-uge0f5qb">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" id="el-ciqx5yz3">
+                          <span class="text-gray-500 dark:text-gray-400 sm:text-sm" id="el-a7uo21jj">$</span>
+                        </div>
+                        <input type="number" step="0.01" min="0" x-model="rate" id="rate" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="750.00">
+                      </div>
+                    </div>
+                    
+                    <!-- Quantity -->
+                    <div id="el-10k194cs">
+                      <label for="quantity" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-8tg0pfy5">Quantity</label>
+                      <div class="mt-1" id="el-0jwu5gp8">
+                        <input type="number" min="1" x-model="quantity" id="quantity" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="1">
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- Total (Read-only) -->
+                  <div id="el-m3ene6s0">
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-oskw59yr">Total Amount</label>
+                    <div class="mt-1 relative rounded-md shadow-sm" id="el-r7cjbq01">
+                      <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" id="el-wwntdhmo">
+                        <span class="text-gray-500 dark:text-gray-400 sm:text-sm" id="el-klu1b02x">$</span>
+                      </div>
+                      <input type="text" readonly="" x-model="total" class="bg-gray-100 dark:bg-gray-600 focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:text-white rounded-md" id="el-u8qmz93a">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Payment Link -->
+              <div class="bg-gray-50 dark:bg-gray-800 p-4 rounded-md" id="el-fk1enpql">
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-1c27zor5">Payment Options (Optional)</h3>
+                
+                <div id="el-cwtow78s">
+                  <label for="payment-link" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-0net36hx">Payment Link</label>
+                  <div class="mt-1" id="el-93wvqtg8">
+                    <input type="url" x-model="paymentLink" id="payment-link" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="https://pay.stripe.com/...">
+                  </div>
+                  <p class="mt-1 text-xs text-gray-500 dark:text-gray-400" id="el-9qe36esq">Add a Stripe or PayPal payment link to include on the invoice</p>
+                </div>
+              </div>
+              
+              <!-- Action Buttons -->
+              <div class="flex items-center justify-end space-x-3 pt-4" id="el-uk4anbyc">
+                <button type="button" class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-0yo06zs4">
+                  Save Draft
+                </button>
+                <a href="#invoice-preview" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-7sgrjoh4">
+                  Preview Invoice
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-15tzzskk">
+                    <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-u6zs2lpe"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Quick Tips -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow-md rounded-lg overflow-hidden" id="el-gug0sg2n">
+        <div class="p-6" id="el-qu91mdlf">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-3cs84la9">Quick Tips</h3>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="el-zfc2pitn">
+            <li class="flex items-start" id="el-t4gxwxxq">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-bu83i0uu">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-7ml7pkdz"></path>
+              </svg>
+              Invoice numbers are auto-generated but can be edited to match your sequence
+            </li>
+            <li class="flex items-start" id="el-i8fr409c">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-dz3fyef4">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-2cu9lprg"></path>
+              </svg>
+              The due date defaults to 30 days from today, but you can adjust this
+            </li>
+            <li class="flex items-start" id="el-sloy2q8a">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-dseo5ot1">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-vugnobtd"></path>
+              </svg>
+              For recurring services, save time by using your last invoice as a template
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+              </element><element id="dae3d747-9112-4558-a040-9b0e980c660c" data-section-id="dae3d747-9112-4558-a040-9b0e980c660c">
+
+
+                
+<div id="root">
+  <section id="invoice-preview" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" id="el-8dchfmhr">
+      <div class="mb-8 flex items-center justify-between" id="el-gc9yu4gi">
+        <div id="el-grwyekpk">
+          <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white" id="el-1jl425fm">Invoice Preview</h2>
+          <p class="mt-2 text-gray-600 dark:text-gray-300" id="el-xlzaz75k">Review how your invoice will look before exporting</p>
+        </div>
+        <a href="#invoice-form" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-bjykkbqh">
+          <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor" id="el-revbu3kf">
+            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" id="el-4rlf5w69"></path>
+          </svg>
+          Edit Invoice
+        </a>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 shadow-lg rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700" id="el-jfhjxy67">
+        <!-- Invoice Header -->
+        <div class="bg-indigo-600 dark:bg-indigo-700 px-6 py-4 text-white" id="el-yaz2grit">
+          <div class="flex justify-between items-center" id="el-ny45qsax">
+            <div id="el-kyj0ob9p">
+              <h2 class="text-2xl font-bold" id="el-prkod9fx">INVOICE</h2>
+              <p class="text-indigo-100" id="el-yr8lqkis">#001234</p>
+            </div>
+            <div class="text-right" id="el-vdjztsfs">
+              <h3 class="text-xl font-semibold" id="el-brijcz2i">Your Business</h3>
+              <p class="text-indigo-100" id="el-bz5r7if3">youremail@example.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoice Details -->
+        <div class="p-6 space-y-6" id="el-nqmzzhzw">
+          <!-- Dates -->
+          <div class="flex justify-between" id="el-vyfemxvu">
+            <div class="w-1/2" id="el-uql21g59">
+              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-cs6dbxd2">Date of Issue</h4>
+              <p class="font-medium text-gray-900 dark:text-white" id="el-pco0ifqm">March 3, 2025</p>
+            </div>
+            <div class="w-1/2" id="el-oh9wu346">
+              <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-33eknikp">Due Date</h4>
+              <p class="font-medium text-gray-900 dark:text-white" id="el-c3d2d98n">April 3, 2025</p>
+            </div>
+          </div>
+
+          <!-- Bill To -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-6" id="el-3fl3iqy8">
+            <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-i0c3uoe7">Bill To:</h4>
+            <div class="mt-2" id="el-apt5pqye">
+              <p class="font-medium text-gray-900 dark:text-white text-lg" id="el-9aqm7j1x">Speedy</p>
+              <p class="text-gray-600 dark:text-gray-300" id="el-85d327i8">123 Business Road</p>
+              <p class="text-gray-600 dark:text-gray-300" id="el-abha1iu8">Miami, FL 33101</p>
+              <p class="text-gray-600 dark:text-gray-300" id="el-lg977j4z">speedy@business.com</p>
+            </div>
+          </div>
+
+          <!-- Invoice Items -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-6" id="el-gj2wdheb">
+            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700" id="el-2o9g3vxk">
+              <thead id="el-enxwbh41">
+                <tr id="el-zr2vgr6b">
+                  <th scope="col" class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" id="el-aa71hzv9">Description</th>
+                  <th scope="col" class="px-4 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" id="el-fhqu1ie9">Qty</th>
+                  <th scope="col" class="px-4 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" id="el-eg9xjx96">Unit Price</th>
+                  <th scope="col" class="px-4 py-3 text-right text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider" id="el-u7i70eg8">Amount</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200 dark:divide-gray-700" id="el-0mb3jsdp">
+                <tr id="el-8kkk8ehr">
+                  <td class="px-4 py-4 text-sm text-gray-900 dark:text-white" id="el-7oeruisw">Marketing Service</td>
+                  <td class="px-4 py-4 text-sm text-gray-900 dark:text-white text-right" id="el-rtowypfk">1</td>
+                  <td class="px-4 py-4 text-sm text-gray-900 dark:text-white text-right" id="el-943zqz41">$750.00</td>
+                  <td class="px-4 py-4 text-sm text-gray-900 dark:text-white text-right" id="el-k7w26q2q">$750.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Totals -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-6" id="el-x0035zj8">
+            <div class="flex justify-end" id="el-inw43lrd">
+              <div class="w-64" id="el-bc41sqv0">
+                <div class="flex justify-between py-2" id="el-nue58h75">
+                  <dt class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-jy5fms7i">Subtotal:</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white" id="el-pb1g7mn7">$750.00</dd>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 flex justify-between py-2" id="el-ag4j31u7">
+                  <dt class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-xhm1p2gz">Total:</dt>
+                  <dd class="text-sm font-medium text-gray-900 dark:text-white" id="el-zw06knkl">$750.00</dd>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 flex justify-between py-2" id="el-bs48fbps">
+                  <dt class="text-base font-bold text-gray-900 dark:text-white" id="el-kt7isev7">Amount Due:</dt>
+                  <dd class="text-base font-bold text-indigo-600 dark:text-indigo-400" id="el-cir2zwak">$750.00</dd>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Payment Link (if provided) -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-6 text-center" id="el-x8mlz45t">
+            <a href="#" class="inline-flex items-center px-5 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-uqy0c8lc">
+              Pay Now
+            </a>
+            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400" id="el-jd7rotod">Secure payment via credit card</p>
+          </div>
+
+          <!-- Notes -->
+          <div class="border-t border-gray-200 dark:border-gray-700 pt-6" id="el-v1a29rtc">
+            <h4 class="text-sm font-medium text-gray-500 dark:text-gray-400" id="el-5l18y4a5">Notes:</h4>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-300" id="el-8072f1gd">Thank you for your business! Payment is due within 30 days.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row sm:justify-end gap-3" id="el-8k7yyp8l">
+        <a href="#invoice-form" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-lin3mzfq">
+          <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor" id="el-ceem4etd">
+            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" id="el-54166nky"></path>
+          </svg>
+          Edit Invoice
+        </a>
+        <a href="#export-options" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-v7q23sfo">
+          Continue to Export
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-xi6cpyil">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-iomxk0f7"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Tips -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow rounded-lg p-6" id="el-46vf87yh">
+        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-au69aks0">Invoice Preview Tips</h3>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="el-x1t2x7pn">
+          <li class="flex items-start" id="el-m4vjnvgk">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-go4h7wke">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-0dy362mw"></path>
+            </svg>
+            This is exactly how your PDF invoice will look when exported
+          </li>
+          <li class="flex items-start" id="el-da1st8ma">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-gdzqfuod">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-tikjsapz"></path>
+            </svg>
+            Need to make changes? Click the 'Edit Invoice' button to return to the form
+          </li>
+          <li class="flex items-start" id="el-z9tq7qwf">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-kwz3ztk3">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-8yfgkgf5"></path>
+            </svg>
+            Ready to send? Click 'Continue to Export' to generate and share your invoice
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+              </element><element id="15596914-83b2-45ba-84cd-023f7e8efff2" data-section-id="15596914-83b2-45ba-84cd-023f7e8efff2">
+
+
+                
+<div id="root">
+  <section id="export-options" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" id="el-ldynwzv1">
+      <div class="mb-8" id="el-krbvmtym">
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white" id="el-0ip24v01">Export &amp; Share</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300" id="el-tw4n2879">Generate your invoice as a PDF and share it with your client</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden" id="el-08ciki7t">
+        <div class="p-6" id="el-7nxl47k6">
+          <div class="flex items-center justify-center mb-8" id="el-nnz1a09j">
+            <div class="relative w-48 h-64 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md flex items-center justify-center" id="el-6cax230o">
+              <div class="absolute inset-0 p-4 flex flex-col" id="el-jhsznsw7">
+                <div class="bg-indigo-600 dark:bg-indigo-700 p-2 text-white text-xs rounded-t-sm" id="el-13dq38q8">
+                  <div class="font-semibold" id="el-lz9rfqad">INVOICE</div>
+                  <div class="text-xs text-indigo-100" id="el-36g3efcr">#001234</div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-2 flex-grow flex flex-col" id="el-vgqh7upb">
+                  <div class="text-xs font-semibold mb-1 text-gray-900 dark:text-white" id="el-aa6jt05j">Bill To:</div>
+                  <div class="text-xs text-gray-600 dark:text-gray-300" id="el-alpyquub">Speedy</div>
+                  <div class="mt-2 border-t border-gray-200 dark:border-gray-700 pt-1" id="el-o82lgvfo">
+                    <div class="text-xs text-gray-600 dark:text-gray-300" id="el-wyy9t86m">Marketing Service</div>
+                  </div>
+                  <div class="mt-auto text-right" id="el-k29qpxdm">
+                    <div class="text-xs font-semibold text-indigo-600 dark:text-indigo-400" id="el-e1ix59yk">$750.00</div>
+                  </div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 dark:text-gray-500 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-hjmayx8u">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" id="el-qis0r5oc"></path>
+              </svg>
+            </div>
+          </div>
+
+          <div class="space-y-8" id="el-y7i2ymgp">
+            <!-- PDF Export -->
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6" id="el-0ydux2gs">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-jvvzbu47">Generate PDF</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4" id="el-og6yfluh">
+                Create a downloadable PDF file of your invoice that you can save or share.
+              </p>
+              <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-77mtxho9">
+                <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-naunf36q">
+                  <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" id="el-5rxoamct"></path>
+                </svg>
+                Download PDF
+              </button>
+            </div>
+
+            <!-- Share Options -->
+            <div id="el-hzlretve">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-ghphv92h">Share Invoice</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-4" id="el-zqf3zjqg">
+                Send your invoice directly to your client using any of these options:
+              </p>
+              
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4" id="el-kl4njs1n">
+                <!-- Email -->
+                <button type="button" class="flex flex-col items-center justify-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150" id="el-ppnvn0ca">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-y0mq8to8">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" id="el-lja4tok4"></path>
+                  </svg>
+                  <span class="mt-2 text-sm font-medium text-gray-900 dark:text-white" id="el-z67mnujp">Email</span>
+                </button>
+                
+                <!-- WhatsApp -->
+                <button type="button" class="flex flex-col items-center justify-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150" id="el-361sk01p">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" viewBox="0 0 24 24" fill="currentColor" id="el-tku3y80u">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.131.332.202.043.72.043.433-.101.763z" id="el-f3eqnjsj"></path>
+                  </svg>
+                  <span class="mt-2 text-sm font-medium text-gray-900 dark:text-white" id="el-w71wozja">WhatsApp</span>
+                </button>
+                
+                <!-- Messages -->
+                <button type="button" class="flex flex-col items-center justify-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150" id="el-eefvehk7">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-4fwhuumv">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" id="el-3h4k6dov"></path>
+                  </svg>
+                  <span class="mt-2 text-sm font-medium text-gray-900 dark:text-white" id="el-f1rb6s8g">Messages</span>
+                </button>
+                
+                <!-- Copy Link -->
+                <button type="button" class="flex flex-col items-center justify-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150" id="el-foeltw5u">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-h65vvw3b">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" id="el-edi24xjc"></path>
+                  </svg>
+                  <span class="mt-2 text-sm font-medium text-gray-900 dark:text-white" id="el-ih5xtc6i">Copy Link</span>
+                </button>
+                
+                <!-- More -->
+                <button type="button" class="flex flex-col items-center justify-center p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-150" id="el-rxfghqfw">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-ahqs65qm">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" id="el-futr6vbr"></path>
+                  </svg>
+                  <span class="mt-2 text-sm font-medium text-gray-900 dark:text-white" id="el-09cu4frk">More Options</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 flex flex-col sm:flex-row sm:justify-between gap-3" id="el-egz1xv96">
+        <a href="#invoice-preview" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-qljw92z2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-gray-500 dark:text-gray-400" viewBox="0 0 20 20" fill="currentColor" id="el-r5cp1mde">
+            <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" id="el-wxs104fm"></path>
+          </svg>
+          Back to Preview
+        </a>
+        <a href="#invoice-history" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-h13nnh94">
+          Go to Invoice History
+          <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 -mr-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-4sd6ovnt">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" id="el-c527obhk"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Tips -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow rounded-lg p-6" id="el-ykj2gre4">
+        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-cctp7cpf">Export Tips</h3>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="el-dks27qeo">
+          <li class="flex items-start" id="el-4ar71jrq">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-lenggo7e">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-j4dbm001"></path>
+            </svg>
+            PDF files are the standard format for professional invoices and are universally accepted
+          </li>
+          <li class="flex items-start" id="el-te88sz86">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-9o79sh3y">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-w5bl6fqz"></path>
+            </svg>
+            When sending via email, include a friendly message with your invoice attached
+          </li>
+          <li class="flex items-start" id="el-865si4zg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-7aefcdu7">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-8qb8hddv"></path>
+            </svg>
+            All invoices are automatically saved to your history for future reference
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+              </element><element id="424df77f-5bf5-4e17-b202-9edadba0647b" data-section-id="424df77f-5bf5-4e17-b202-9edadba0647b">
+
+
+                
+<div id="root">
+  <section id="invoice-history" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="el-xt0w5omf">
+      <div class="mb-8 flex items-center justify-between" id="el-r5xm32rn">
+        <div id="el-foowweyp">
+          <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white" id="el-8cb9ajgk">Invoice History</h2>
+          <p class="mt-2 text-gray-600 dark:text-gray-300" id="el-cmv8i431">View, edit, or delete your past invoices</p>
+        </div>
+        <a href="#invoice-form" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-sq4b4zri">
+          <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor" id="el-b7pb2olt">
+            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" id="el-y940d0tx"></path>
+          </svg>
+          New Invoice
+        </a>
+      </div>
+
+      <!-- Search and Filter -->
+      <div class="mb-6 bg-white dark:bg-gray-900 shadow rounded-lg p-4" id="el-jb67smvs">
+        <div class="flex flex-col sm:flex-row gap-4" id="el-0w79yupd">
+          <div class="relative flex-grow" id="el-rvyx6sr3">
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" id="el-pegm6oix">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" id="el-w5yx5l08">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" id="el-cih2vm6z"></path>
+              </svg>
+            </div>
+            <input type="text" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" placeholder="Search invoices..." id="el-3fpejvu3">
+          </div>
+          <div class="flex items-center justify-end space-x-2" id="el-8pr94iqj">
+            <select class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white bg-transparent text-gray-500 sm:text-sm rounded-md" id="el-4ne3hfzb">
+              <option id="el-jns5pblf">All Dates</option>
+              <option id="el-aom3rz6c">Last 30 days</option>
+              <option id="el-y4ctrgl4">Last 3 months</option>
+              <option id="el-1mzfcwng">Last year</option>
+            </select>
+            <select class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white bg-transparent text-gray-500 sm:text-sm rounded-md" id="el-hau6bl53">
+              <option id="el-1eujmeqx">All Clients</option>
+              <option id="el-mfbuokbs">Speedy</option>
+              <option id="el-llbefp2v">Other clients</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoice List -->
+      <div class="bg-white dark:bg-gray-900 shadow overflow-hidden sm:rounded-md" id="el-znsmctft">
+        <ul class="divide-y divide-gray-200 dark:divide-gray-700" id="el-55l1boip">
+          <!-- Invoice 1 -->
+          <li id="el-slvh7le2">
+            <div class="block hover:bg-gray-50 dark:hover:bg-gray-800" id="el-f39cp9qh">
+              <div class="flex items-center px-4 py-4 sm:px-6" id="el-pytbllj7">
+                <div class="min-w-0 flex-1 flex items-center" id="el-cjuxsy2q">
+                  <div class="flex-shrink-0" id="el-73ho0ub3">
+                    <div class="h-12 w-12 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center" id="el-362c8afo">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-483lz42y">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" id="el-h3rpkr4o"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4" id="el-7clju4mz">
+                    <div id="el-mmyk8h7l">
+                      <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400 truncate" id="el-2dtecdrl">Invoice #001234</p>
+                      <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-86mudt98">
+                        <span id="el-w4d2g7bh">Speedy</span>
+                      </p>
+                    </div>
+                    <div class="hidden md:block" id="el-i7tki9u8">
+                      <div id="el-32aqihqm">
+                        <p class="text-sm text-gray-900 dark:text-white font-medium" id="el-1n8c3sm5">
+                          $750.00
+                        </p>
+                        <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-7m96486o">
+                          <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" id="el-h356mk5y">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" id="el-l7qcqld3"></path>
+                          </svg>
+                          <span id="el-a7sextbx">March 3, 2025</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-2" id="el-jtdw8oes">
+                  <a href="#invoice-preview" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-e9rrbic4">
+                    View
+                  </a>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-1uach0o0">
+                    Edit
+                  </button>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent shadow-sm text-xs font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" id="el-ditxf6ia">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Invoice 2 -->
+          <li id="el-cl699amx">
+            <div class="block hover:bg-gray-50 dark:hover:bg-gray-800" id="el-hmn7qd0u">
+              <div class="flex items-center px-4 py-4 sm:px-6" id="el-30db1ncg">
+                <div class="min-w-0 flex-1 flex items-center" id="el-neh2fgof">
+                  <div class="flex-shrink-0" id="el-vwovjdjt">
+                    <div class="h-12 w-12 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center" id="el-c9akv7tp">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-bscl2age">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" id="el-pc3sdz6y"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4" id="el-ievw8kpp">
+                    <div id="el-8ho1etgm">
+                      <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400 truncate" id="el-gzlvrcce">Invoice #001233</p>
+                      <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-b2bgn2wd">
+                        <span id="el-yxmuvqn9">Speedy</span>
+                      </p>
+                    </div>
+                    <div class="hidden md:block" id="el-fg5u4ner">
+                      <div id="el-uczob2vh">
+                        <p class="text-sm text-gray-900 dark:text-white font-medium" id="el-60ji8la1">
+                          $750.00
+                        </p>
+                        <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-59usaajr">
+                          <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" id="el-4mv0xzd5">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" id="el-f9reon44"></path>
+                          </svg>
+                          <span id="el-683sgf83">February 3, 2025</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-2" id="el-v4lkxnyo">
+                  <a href="#invoice-preview" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-hsypmliq">
+                    View
+                  </a>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-mmjnnb61">
+                    Edit
+                  </button>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent shadow-sm text-xs font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" id="el-jv73ot8k">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Invoice 3 -->
+          <li id="el-iut664x5">
+            <div class="block hover:bg-gray-50 dark:hover:bg-gray-800" id="el-s194ew8y">
+              <div class="flex items-center px-4 py-4 sm:px-6" id="el-66xejmtw">
+                <div class="min-w-0 flex-1 flex items-center" id="el-r8m4tqk3">
+                  <div class="flex-shrink-0" id="el-pdex17yh">
+                    <div class="h-12 w-12 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center" id="el-zuo9q225">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-l3yp16m1">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" id="el-spojw2ti"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4" id="el-klua4kpm">
+                    <div id="el-028yk7ix">
+                      <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400 truncate" id="el-k8a5ruk9">Invoice #001232</p>
+                      <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-xpv47r2x">
+                        <span id="el-89ryqmpr">Speedy</span>
+                      </p>
+                    </div>
+                    <div class="hidden md:block" id="el-fes6op7f">
+                      <div id="el-9ebwrizd">
+                        <p class="text-sm text-gray-900 dark:text-white font-medium" id="el-5vdwsltl">
+                          $750.00
+                        </p>
+                        <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-u3uamnz4">
+                          <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" id="el-yzcsxbkl">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" id="el-ukteato1"></path>
+                          </svg>
+                          <span id="el-hydcai5g">January 3, 2025</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-2" id="el-vrl4o37d">
+                  <a href="#invoice-preview" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-jqjrue0y">
+                    View
+                  </a>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-fmzd4njk">
+                    Edit
+                  </button>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent shadow-sm text-xs font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" id="el-bq3vcdxz">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Invoice 4 -->
+          <li id="el-vdipmmsc">
+            <div class="block hover:bg-gray-50 dark:hover:bg-gray-800" id="el-2w3pou94">
+              <div class="flex items-center px-4 py-4 sm:px-6" id="el-8f9agvit">
+                <div class="min-w-0 flex-1 flex items-center" id="el-aqmptru6">
+                  <div class="flex-shrink-0" id="el-eb5pmww5">
+                    <div class="h-12 w-12 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center" id="el-sjxxcl2y">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-udn9wngq">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" id="el-ezuj7fiv"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4" id="el-4gsgyulf">
+                    <div id="el-oyxrr9b8">
+                      <p class="text-sm font-medium text-indigo-600 dark:text-indigo-400 truncate" id="el-a0obzqep">Invoice #001231</p>
+                      <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-f0nz11gi">
+                        <span id="el-g3n2co3i">Speedy</span>
+                      </p>
+                    </div>
+                    <div class="hidden md:block" id="el-ipgfqf11">
+                      <div id="el-ewktute0">
+                        <p class="text-sm text-gray-900 dark:text-white font-medium" id="el-f3i7kas5">
+                          $750.00
+                        </p>
+                        <p class="mt-1 flex items-center text-sm text-gray-500 dark:text-gray-400" id="el-uyiehigg">
+                          <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 dark:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" id="el-beno8zts">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" id="el-nhtfse7v"></path>
+                          </svg>
+                          <span id="el-uobsnth4">December 3, 2024</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex space-x-2" id="el-tab8uqlp">
+                  <a href="#invoice-preview" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-me6nqn9s">
+                    View
+                  </a>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 shadow-sm text-xs font-medium rounded text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-nian1ac1">
+                    Edit
+                  </button>
+                  <button type="button" class="inline-flex items-center px-2.5 py-1.5 border border-transparent shadow-sm text-xs font-medium rounded text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" id="el-vau9pr1z">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pagination -->
+      <div class="bg-white dark:bg-gray-900 px-4 py-3 flex items-center justify-between border-t border-gray-200 dark:border-gray-700 sm:px-6 mt-4 rounded-md shadow" id="el-mttpnnte">
+        <div class="flex-1 flex justify-between sm:hidden" id="el-qsbs4x54">
+          <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" id="el-9gaboisy">
+            Previous
+          </a>
+          <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600" id="el-49es7ztr">
+            Next
+          </a>
+        </div>
+        <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between" id="el-wx1ykk31">
+          <div id="el-e25bkhjw">
+            <p class="text-sm text-gray-700 dark:text-gray-300" id="el-sprnxyj7">
+              Showing <span class="font-medium" id="el-60hh5ace">1</span> to <span class="font-medium" id="el-6h2atzrk">4</span> of <span class="font-medium" id="el-1x08vk40">12</span> invoices
+            </p>
+          </div>
+          <div id="el-rdxkjhzh">
+            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination" id="el-rhkr3nie">
+              <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600" id="el-cbj9smym">
+                <span class="sr-only" id="el-25fvx3zs">Previous</span>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" id="el-8pex07fv">
+                  <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" id="el-9179g26v"></path>
+                </svg>
+              </a>
+              <a href="#" aria-current="page" class="z-10 bg-indigo-50 dark:bg-indigo-900 border-indigo-500 dark:border-indigo-500 text-indigo-600 dark:text-indigo-300 relative inline-flex items-center px-4 py-2 border text-sm font-medium" id="el-anqaya5o">
+                1
+              </a>
+              <a href="#" class="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium" id="el-yv9mgfzr">
+                2
+              </a>
+              <a href="#" class="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium" id="el-fzn5e747">
+                3
+              </a>
+              <a href="#" class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm font-medium text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-600" id="el-g1gh2rw2">
+                <span class="sr-only" id="el-7hunhq75">Next</span>
+                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" id="el-3aksl9tw">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" id="el-znwxic87"></path>
+                </svg>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow rounded-lg p-6" id="el-al8dl279">
+        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-26y0xvql">Invoice History Management Tips</h3>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300" id="el-s9bprgsc">
+          <li class="flex items-start" id="el-06x3vauz">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-ym5jzlhc">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-35z2z5bs"></path>
+            </svg>
+            Use the search function to quickly find invoices by client name or invoice number
+          </li>
+          <li class="flex items-start" id="el-i8knt3y1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-ld63bf25">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-h7jypdr2"></path>
+            </svg>
+            Save time by duplicating past invoices for recurring billing - just click "Edit" and update the dates
+          </li>
+          <li class="flex items-start" id="el-31e9p99y">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500 mr-2" viewBox="0 0 20 20" fill="currentColor" id="el-u1slusym">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" id="el-yzldu7jz"></path>
+            </svg>
+            Periodically clean up old invoices to keep your history organized and manageable
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+              </element><element id="61e53a2a-14c3-4e89-b127-a6ede2982101" data-section-id="61e53a2a-14c3-4e89-b127-a6ede2982101">
+
+
+                
+<div id="root">
+  <section id="settings" class="py-12 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8" id="el-nev0jk14">
+      <div class="mb-8" id="el-9ccm9x58">
+        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white" id="el-v26zqo0n">Settings</h2>
+        <p class="mt-2 text-gray-600 dark:text-gray-300" id="el-w76mwp5v">Customize your invoice defaults and preferences</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden" id="el-hs7uohbe">
+        <div class="p-6" id="el-7fhy59th">
+          <form x-data="{
+            companyName: 'Your Business',
+            companyEmail: 'youremail@example.com',
+            companyAddress: '',
+            companyLogo: null,
+            defaultRate: 750.00,
+            defaultPaymentTerms: 30,
+            darkMode: false,
+            invoiceTemplate: 'classic',
+            accentColor: '#4f46e5'
+          }" id="el-z7xtx6ij">
+            <!-- Business Information -->
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6 mb-6" id="el-760tctlc">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-0s6jjycv">Business Information</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" id="el-9iu8fhbf">This information will appear on all your invoices.</p>
+              
+              <div class="space-y-4" id="el-qrvz4x91">
+                <!-- Company Name -->
+                <div id="el-l56ibndw">
+                  <label for="company-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-a0dk9ck7">Company/Business Name</label>
+                  <div class="mt-1" id="el-boz5gdpg">
+                    <input type="text" x-model="companyName" id="company-name" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                  </div>
+                </div>
+                
+                <!-- Company Email -->
+                <div id="el-tqhd3yx6">
+                  <label for="company-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-eqx2u9qq">Email</label>
+                  <div class="mt-1" id="el-s1q38o4d">
+                    <input type="email" x-model="companyEmail" id="company-email" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                  </div>
+                </div>
+                
+                <!-- Company Address -->
+                <div id="el-pmh30zbt">
+                  <label for="company-address" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-lxkdpq4f">Address (Optional)</label>
+                  <div class="mt-1" id="el-6txxq2qc">
+                    <textarea id="company-address" x-model="companyAddress" rows="2" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md"></textarea>
+                  </div>
+                </div>
+                
+                <!-- Company Logo -->
+                <div id="el-hbx0k5wz">
+                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-zajv51on">Logo (Optional)</label>
+                  <div class="mt-1 flex items-center" id="el-7vu51de2">
+                    <span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-700" id="el-wzbwl45q">
+                      <template x-if="!companyLogo" id="el-bu36qbah">
+                        <svg class="h-full w-full text-gray-300 dark:text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                      </template><svg class="h-full w-full text-gray-300 dark:text-gray-600" fill="currentColor" viewBox="0 0 24 24" id="el-s6t8o7uc">
+                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" id="el-ssve368v"></path>
+                        </svg>
+                      <template x-if="companyLogo" id="el-gilrn0qd">
+                        <img x-bind:src="companyLogo" alt="Company logo">
+                      </template>
+                    </span>
+                    <button type="button" class="ml-5 bg-white dark:bg-gray-700 py-2 px-3 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-gxczo6fb">
+                      Change
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Invoice Defaults -->
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6 mb-6" id="el-lbo2n6hi">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-bpf7jwao">Invoice Defaults</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" id="el-9795iavl">These settings will be pre-filled on new invoices.</p>
+              
+              <div class="space-y-4" id="el-6llacahk">
+                <!-- Default Rate -->
+                <div id="el-xiasl10d">
+                  <label for="default-rate" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-krq2fn20">Default Rate ($)</label>
+                  <div class="mt-1 relative rounded-md shadow-sm" id="el-5wxbphwn">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none" id="el-45rb8g8h">
+                      <span class="text-gray-500 dark:text-gray-400 sm:text-sm" id="el-2adcu2f1">$</span>
+                    </div>
+                    <input type="number" step="0.01" min="0" x-model="defaultRate" id="default-rate" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                  </div>
+                </div>
+                
+                <!-- Payment Terms -->
+                <div id="el-4twdtx1y">
+                  <label for="payment-terms" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-dhmpqvfw">Default Payment Terms (Days)</label>
+                  <div class="mt-1" id="el-53a3ryd4">
+                    <input type="number" min="1" x-model="defaultPaymentTerms" id="payment-terms" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Appearance -->
+            <div class="border-b border-gray-200 dark:border-gray-700 pb-6 mb-6" id="el-ehgm9a3g">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-v4bzqvjx">Appearance</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" id="el-q0zj0tru">Customize the look and feel of your invoices.</p>
+              
+              <div class="space-y-6" id="el-kegjrstr">
+                <!-- Dark Mode Toggle -->
+                <div class="flex items-center justify-between" id="el-wo9746r8">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300" id="el-vadrzv3i">Dark Mode</span>
+                  <button type="button" x-on:click="darkMode = !darkMode" class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 bg-gray-200 dark:bg-gray-700" :class="darkMode ? 'bg-indigo-600' : 'bg-gray-200 dark:bg-gray-700'" id="el-j3f4cz2e">
+                    <span class="sr-only" id="el-feg4w5yj">Toggle dark mode</span>
+                    <span aria-hidden="true" class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200 translate-x-0" :class="darkMode ? 'translate-x-5' : 'translate-x-0'" id="el-p21s7xrg"></span>
+                  </button>
+                </div>
+                
+                <!-- Invoice Template -->
+                <div id="el-e0rirx48">
+                  <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" id="el-i68gkrn8">Invoice Template</label>
+                  <div class="grid grid-cols-2 gap-4" id="el-8tzgzaeg">
+                    <!-- Classic Template -->
+                    <div class="relative" id="el-jwo5m8ke">
+                      <input id="template-classic" x-model="invoiceTemplate" type="radio" name="invoiceTemplate" value="classic" class="sr-only" aria-labelledby="template-classic-label">
+                      <label for="template-classic" class="cursor-pointer block h-full overflow-hidden rounded-md border focus:outline-none p-2 border-indigo-500 ring-2 ring-indigo-500" :class="invoiceTemplate === 'classic' ? 'border-indigo-500 ring-2 ring-indigo-500' : 'border-gray-300 dark:border-gray-600'" id="el-k5nprgr1">
+                        <div class="h-32 bg-white dark:bg-gray-700 rounded-md shadow-sm flex flex-col p-2 text-xs" id="el-re80qmw6">
+                          <div class="bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 p-1 rounded-sm mb-1" id="el-cny3hm2y">INVOICE</div>
+                          <div class="flex-grow flex flex-col justify-between" id="el-wstrc4i6">
+                            <div id="el-xkd7rzum">
+                              <div class="font-medium" id="el-bvnakhz0">Classic</div>
+                              <div id="el-oazzmngf">Clean, traditional layout</div>
+                            </div>
+                            <div class="bg-gray-100 dark:bg-gray-600 h-4 w-2/3 rounded-sm" id="el-5grsln16"></div>
+                          </div>
+                        </div>
+                        <p id="template-classic-label" class="mt-2 block text-sm font-medium text-gray-900 dark:text-white text-center">Classic</p>
+                      </label>
+                    </div>
+                    
+                    <!-- Modern Template -->
+                    <div class="relative" id="el-ghvnq7qa">
+                      <input id="template-modern" x-model="invoiceTemplate" type="radio" name="invoiceTemplate" value="modern" class="sr-only" aria-labelledby="template-modern-label">
+                      <label for="template-modern" class="cursor-pointer block h-full overflow-hidden rounded-md border focus:outline-none p-2 border-gray-300 dark:border-gray-600" :class="invoiceTemplate === 'modern' ? 'border-indigo-500 ring-2 ring-indigo-500' : 'border-gray-300 dark:border-gray-600'" id="el-2u4xlbyf">
+                        <div class="h-32 bg-white dark:bg-gray-700 rounded-md shadow-sm flex flex-col p-2 text-xs" id="el-va376o7d">
+                          <div class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white p-1 rounded-sm mb-1 text-center" id="el-iaf5w0qz">INVOICE</div>
+                          <div class="flex-grow flex flex-col justify-between" id="el-fx3ojznt">
+                            <div id="el-ntq98kco">
+                              <div class="font-medium" id="el-puqts7t6">Modern</div>
+                              <div id="el-pq6cy7fw">Contemporary, colorful style</div>
+                            </div>
+                            <div class="bg-gray-100 dark:bg-gray-600 h-4 w-2/3 rounded-sm" id="el-nbnb9k6e"></div>
+                          </div>
+                        </div>
+                        <p id="template-modern-label" class="mt-2 block text-sm font-medium text-gray-900 dark:text-white text-center">Modern</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Accent Color -->
+                <div id="el-6vxi19k3">
+                  <label for="accent-color" class="block text-sm font-medium text-gray-700 dark:text-gray-300" id="el-qb2rekvg">Accent Color</label>
+                  <div class="mt-1 flex space-x-2" id="el-kofps7fk">
+                    <input type="color" x-model="accentColor" id="accent-color" class="h-8 w-8 rounded-md border-gray-300 dark:border-gray-600 focus:ring-indigo-500 focus:border-indigo-500">
+                    <div class="grow" id="el-a7kck0iq">
+                      <input type="text" x-model="accentColor" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-3 py-2 sm:text-sm border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md" id="el-utnclslk">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Save Button -->
+            <div class="flex justify-end" id="el-3m97pfuv">
+              <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-yfoobqdx">
+                Save Settings
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Data Management -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden" id="el-onhqxb8n">
+        <div class="p-6" id="el-hfda2g9o">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-9lulnh2p">Data Management</h3>
+          
+          <div class="space-y-4" id="el-b8bvpi6k">
+            <p class="text-sm text-gray-600 dark:text-gray-400" id="el-nq5oh2jb">Manage your invoice data and application settings.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2" id="el-zbwytfi6">
+              <button type="button" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-316e8qpq">
+                <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-wf8ksi46">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" id="el-j2sveq9a"></path>
+                </svg>
+                Export All Invoices
+              </button>
+              <button type="button" class="inline-flex items-center px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-rrya6qur">
+                <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-gray-400 dark:text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-f3g1eh6v">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" id="el-w3oequel"></path>
+                </svg>
+                Reset App Settings
+              </button>
+            </div>
+            
+            <div class="pt-4 border-t border-gray-200 dark:border-gray-700" id="el-ln75700k">
+              <button type="button" class="inline-flex items-center px-4 py-2 border border-red-300 dark:border-red-700 rounded-md shadow-sm text-sm font-medium text-red-700 dark:text-red-400 bg-white dark:bg-gray-700 hover:bg-red-50 dark:hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" id="el-lr3yoaif">
+                <svg xmlns="http://www.w3.org/2000/svg" class="-ml-1 mr-2 h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-x72inke7">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" id="el-h332hzzr"></path>
+                </svg>
+                Delete All Data
+              </button>
+              <p class="mt-1 text-xs text-gray-500 dark:text-gray-400" id="el-gxjxscek">This will permanently delete all your invoices and settings. This action cannot be undone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- About & Help -->
+      <div class="mt-8 bg-white dark:bg-gray-900 shadow rounded-lg overflow-hidden" id="el-21dcnrsc">
+        <div class="p-6" id="el-z9l7aybm">
+          <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-4" id="el-dqbohfyy">About &amp; Help</h3>
+          
+          <div class="space-y-4" id="el-3ufnnk48">
+            <div class="flex justify-between items-center" id="el-78evwt0t">
+              <div id="el-75c4dl6r">
+                <p class="text-sm font-medium text-gray-700 dark:text-gray-300" id="el-ocz3u1cy">App Version</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400" id="el-61undplq">1.0.0</p>
+              </div>
+              <button type="button" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded text-indigo-700 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-900 hover:bg-indigo-200 dark:hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="el-lacot99u">
+                Check for Updates
+              </button>
+            </div>
+            
+            <div class="pt-4 border-t border-gray-200 dark:border-gray-700 space-y-2" id="el-9rnk7uhx">
+              <button type="button" class="flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300" id="el-wtgh7sqx">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-c2rbalf1">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" id="el-jqu4oski"></path>
+                </svg>
+                View Help Documentation
+              </button>
+              
+              <button type="button" class="flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300" id="el-ns63kpcw">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-2wwndu4k">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" id="el-6wbjhjct"></path>
+                </svg>
+                Contact Support
+              </button>
+              
+              <button type="button" class="flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300" id="el-7b5e9rcx">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="el-4c5svxvf">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" id="el-857i09bk"></path>
+                </svg>
+                Privacy Policy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+              </element><element id="0cbd7aaf-93c2-47c0-8146-aa14ccfef31e" data-section-id="0cbd7aaf-93c2-47c0-8146-aa14ccfef31e">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element><element id="eccc9a29-c4cd-4fbd-b580-dd48f777c0a6" data-section-id="eccc9a29-c4cd-4fbd-b580-dd48f777c0a6">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element><element id="f51223c5-42c5-43de-88a0-c8c8b699560e" data-section-id="f51223c5-42c5-43de-88a0-c8c8b699560e">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element><element id="ac7d272e-f910-41e4-98c9-233754b19f4f" data-section-id="ac7d272e-f910-41e4-98c9-233754b19f4f">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element><element id="fe2592e7-9a26-4c2a-bfb3-9f427e552ed8" data-section-id="fe2592e7-9a26-4c2a-bfb3-9f427e552ed8">
+
+
+                
+<div id="root">
+  
+</div>
+
+              </element></div>
+            <div id="page_complete">
+            <script src="/edit/edit.js"></script>
+            <script>
+                console.log('Page complete');
+                // Initialize hamburger menu functionality
+                document.addEventListener('DOMContentLoaded', function() {
+                  // Initialize all hamburger menus on the page
+                  const hamburgerButtons = document.querySelectorAll('.hamburger-menu, [aria-label="Toggle menu"], [data-toggle="menu"], .mobile-menu-button');
+                  
+                  hamburgerButtons.forEach(button => {
+                    if (button) {
+                      button.addEventListener('click', function() {
+                        // Find the related menu (common patterns in modern websites)
+                        const menu = this.nextElementSibling || 
+                                    document.querySelector(this.getAttribute('data-target')) || 
+                                    document.querySelector('.mobile-menu, .menu-items, .nav-menu');
+                        
+                        if (menu) {
+                          // Toggle menu visibility
+                          if (menu.classList.contains('hidden')) {
+                            menu.classList.remove('hidden');
+                            this.setAttribute('aria-expanded', 'true');
+                          } else {
+                            menu.classList.add('hidden');
+                            this.setAttribute('aria-expanded', 'false');
+                          }
+                          
+                          // Toggle hamburger button appearance if it has typical hamburger elements
+                          const bars = this.querySelectorAll('div, span, .bar');
+                          if (bars.length >= 2) {
+                            this.classList.toggle('active');
+                          }
+                        }
+                      });
+                    }
+                  });
+                  
+                  // Send a message to the parent frame to indicate content is ready
+                  if (window.parent && window.parent !== window) {
+                    window.parent.postMessage({ type: 'iframe-content-loaded' }, '*');
+                  }
+                });
+            </script>
+            </body>
+            </html>
+          
